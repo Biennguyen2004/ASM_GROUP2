@@ -1,0 +1,105 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .nav {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-item {
+            margin: 10px 0;
+        }
+
+        .nav-link {
+            text-decoration: none;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .btn-info {
+            background-color: #17a2b8;
+            color: white;
+        }
+
+            .btn-info:hover {
+                background-color: #138496;
+            }
+
+        .logout-form {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+            .logout-form button {
+                background-color: #dc3545;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+                .logout-form button:hover {
+                    background-color: #c82333;
+                }
+
+        h1 {
+            color: #343a40;
+        }
+
+        ul {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <form asp-controller="Authentication" asp-action="Logout" method="post">
+        <button type="submit">Logout</button>
+        @Html.AntiForgeryToken()
+    </form>
+    <div class="container">
+        <h1>Welcome To HomePage,Teacher!</h1>
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-action list-group-item-warning"><a href="@Url.Action("ViewClass", "Classes")">View Classes</a></li>
+            <li class="list-group-item list-group-item-action list-group-item-warning"><a href="@Url.Action("ViewStudent", "Students")">View Students</a></li>
+            <li class="list-group-item list-group-item-action list-group-item-warning"><a href="@Url.Action("ViewCourse", "Courses")">View Courses</a></li>
+        </ul>
+    </div>
+ 
+</body>
+</html>

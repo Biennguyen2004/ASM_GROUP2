@@ -1,0 +1,109 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        h2 {
+            color: #666;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            margin: 5px;
+            border: 1px solid #17a2b8;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #17a2b8;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+            .btn:hover {
+                background-color: #17a2b8;
+                color: #fff;
+            }
+
+        .course-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .course-item {
+            background-color: #e9ecef;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+            .course-item h3 {
+                margin: 0;
+                color: #333;
+            }
+            
+    </style>
+</head>
+<body>
+ 
+    <h1>Welcome to our homepage</h1>
+
+    <div class="container">
+       
+        <div class="btn-container">
+            <a class="btn btn-outline-info" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            <a class="btn btn-outline-info" asp-area="" asp-controller="Home" asp-action="Privacy">About Us</a>
+            <a class="btn btn-outline-info" asp-area="" asp-controller="Authentication" asp-action="Login">Log In</a>
+
+        </div>
+        <h2>About SIMS System</h2>
+        <p>SIMS System is a leading institution committed to providing the best quality education to students.</p>
+
+        <h2>List of Majors:</h2>
+        <ul class="course-list">
+            <li class="course-item">
+                <h3>APDP</h3>
+            </li>
+            <li class="course-item">
+                <h3>Coding game</h3>
+            </li>
+            <li class="course-item">
+                <h3>BPS</h3>
+            </li>
+            
+            <!-- Add more items as needed -->
+        </ul>
+    </div>
+</body>
+</html>
